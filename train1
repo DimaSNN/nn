@@ -1,0 +1,43 @@
+require 'torch'
+require 'nn'
+require 'csvigo'
+require 'nnx'
+require 'optim'
+
+
+trainPath = '/home/dmitry/nn/Spectr_MFNN.csv'
+
+trainData= csvigo.load({path= trainPath, mode='raw', separator=';' })
+-- testData = torch.load(testPath,'ascii')
+csv_tensor = torch.Tensor(trainData)
+
+input= csv_tensor:sub(1,30,2,1667)
+output = csv_tensor:sub(1,30,1,1)
+
+-- define the mlp
+mlp = nn.Sequential()
+
+mlp:add(nn.Reshape(1666))
+mlp:add(nn.Linear(1666, 256))
+mlp:add(nn.Tanh())
+--mlp:add(nn.Linear(300, 300))
+--mlp:add(nn.Tanh())
+mlp:add(nn.Linear(256, 128))
+mlp:add(nn.Tanh())
+mlp:add(nn.Linear(128, 1))
+
+
+
+dataset={};
+function dataset:size() return 29 end -- 29 examples
+for i=1,dataset:size() do 
+  local input1= input[i]
+  local output1 = output[i]
+  dataset[i] = {input1, output1}
+end
+
+criterion = nn.MSECriterion()  
+trainer = nn.StochasticGradient(mlp, criterion)
+trainer.learningRate = 0.01
+trainer.maxIteration =150
+trainer:train(dataset)
