@@ -1,19 +1,19 @@
 -- рабочая сеть для CPU
 require 'torch'
 require 'nn'
-require 'csvigo'
 require 'nnx'
 require 'optim'
-
-
+-- require 'csvigo'
+csvfile = require "simplecsv"
 
 trainPath = '/home/dmitry/nn/Spectr_MFNN.csv'
+td = csvfile.read(trainPath, ';')
 
-trainData= csvigo.load({path= trainPath, mode='raw', separator=';' })
+--trainData= csvigo.load({path= trainPath, mode='raw', separator=';' })
 -- testData = torch.load(testPath,'ascii')
-csv_tensor = torch.Tensor(trainData)
+csv_tensor = torch.Tensor(td)  -- td =trainData
 
-input= csv_tensor:sub(1,30,2,1667)
+input  = csv_tensor:sub(1,30,2,1667)
 output = csv_tensor:sub(1,30,1,1)
 
 -- define the mlp
@@ -29,7 +29,7 @@ mlp:add(nn.Tanh())
 mlp:add(nn.Linear(128, 1))
 
 
-loss = nn.MSECriterion() 
+loss = nn.MSECriterion()
 
 --mlp:add(nn.LogSoftMax())
 --loss = nn.ClassNLLCriterion()
@@ -86,6 +86,7 @@ print(string.format('Success! Average iteration time was %f',timer:time().real))
 print('Success!')
 
 torch.cat(mlp:forward(input),output)
+#fw
 
 
 
@@ -96,20 +97,29 @@ torch.cat(mlp:forward(input),output)
 --- GPU---------------------------------------------------------
 require 'torch'
 require 'nn'
-require 'csvigo'
 require 'nnx'
 require 'optim'
 require 'cutorch'
 require 'cunn'
+-- require 'csvigo'
+csvfile = require "simplecsv"
 
 
 
 trainPath = '/home/dmitry/nn/Spectr_MFNN.csv'
+--trainPath = '/home/dmitry/nn/data/Спектр.csv'
 
-trainData= csvigo.load({path= trainPath, mode='raw', separator=';' })
+td = csvfile.read(trainPath, ';')
 -- testData = torch.load(testPath,'ascii')
-csv_tensor = torch.Tensor(trainData)
+csv_tensor = torch.Tensor(td)
 
+
+
+--input= csv_tensor:sub(1,9,1,3)
+--input = input:cuda()
+--output = csv_tensor:sub(1,9,4,15004)
+--output=output:cuda()
+--
 input= csv_tensor:sub(1,30,2,1667)
 input = input:cuda()
 output = csv_tensor:sub(1,30,1,1)
@@ -128,7 +138,7 @@ mlp:add(nn.Tanh())
 mlp:add(nn.Linear(128, 1))
 mlp:cuda()
 
-loss = nn.MSECriterion() 
+loss = nn.MSECriterion()
 loss:cuda()
 --mlp:add(nn.LogSoftMax())
 --loss = nn.ClassNLLCriterion()
@@ -169,6 +179,7 @@ print('Success!')
 torch.cat(mlp:forward(input),output)
 #fw
 
+--конец
 
 
 
@@ -186,8 +197,7 @@ torch.cat(mlp:forward(input),output)
 
 
 
-
-
+-- дальше код какой-то херни, уже и не помню
 --[[
 --batchSize = 128
 --local yt = torch.Tensor(batchSize)
@@ -195,7 +205,7 @@ torch.cat(mlp:forward(input),output)
 
 
 -- Создаём специальные переменные: веса нейросети и их градиенты
- 
+
 
 
 -- Затем в цикле обучения вызываем
@@ -218,3 +228,4 @@ print(string.format('Success! Average iteration time was %f',timer:time().real/m
 
 
 
+watch -n 1 nvidia-smi

@@ -1,0 +1,999 @@
+dmitry@userPC ~$ th
+ 
+  ______             __   |  Torch7 
+ /_  __/__  ________/ /   |  Scientific computing for Lua. 
+  / / / _ \/ __/ __/ _ \  |  Type ? for help 
+ /_/  \___/_/  \__/_//_/  |  https://github.com/torch 
+                          |  http://torch.ch 
+	
+th> require 'torch'
+{
+  deserialize : function: 0x40a65dc0
+  cat : function: 0x40177b58
+  cdata : function: 0x41b1ecd8
+  newmetatable : function: 0x40a658d0
+  atan2 : function: 0x41ba4958
+  bhistc : function: 0x41b92e20
+  random : function: 0x40177bc8
+  zero : function: 0x4017a520
+  logNormal : function: 0x41ba4c70
+  sigmoid : function: 0x41ba47a8
+  getnumcores : function: 0x41ba66c0
+  cross : function: 0x40179880
+  deserializeFromStorage : function: 0x40a65da0
+  inverse : function: 0x41b958f8
+  getmetatable : function: 0x40a65f40
+  isTypeOf : function: 0x41b948d0
+  ByteStorage : {...}
+  prod : function: 0x40179630
+  ger : function: 0x40179268
+  eq : function: 0x41b929e8
+  getnumthreads : function: 0x4016cdc8
+  ByteTensor : {...}
+  Timer : {...}
+  addmv : function: 0x401792d0
+  lerp : function: 0x41ba48f0
+  match : function: 0x41b91f40
+  Allocator : {...}
+  xcorr2 : function: 0x40177e58
+  neg : function: 0x41ba4818
+  histc : function: 0x41b92dc0
+  pstrf : function: 0x41b95a98
+  bernoulli : function: 0x40177ca0
+  MemoryFile : {...}
+  cremainder : function: 0x41b921b8
+  Storage : {...}
+  ge : function: 0x41b92980
+  kthvalue : function: 0x40177928
+  geometric : function: 0x40177c30
+  sin : function: 0x41b932a8
+  topk : function: 0x401778b8
+  baddbmm : function: 0x40179458
+  fill : function: 0x4017a580
+  linspace : function: 0x41b92fa0
+  sum : function: 0x401795d0
+  numel : function: 0x401794b0
+  orgqr : function: 0x41b95be0
+  _heaptracking : true
+  test : function: 0x40b343f0
+  FloatTensor : {...}
+  cmul : function: 0x41b91fa0
+  isTensor : function: 0x40b34458
+  getconstructortable : function: 0x41ba6bb0
+  version : function: 0x40a66fa8
+  fmod : function: 0x41b91dd0
+  IntStorage : {...}
+  mean : function: 0x41b92c78
+  Tester : {...}
+  data : function: 0x41b1ec98
+  cmin : function: 0x40179750
+  addcdiv : function: 0x401790d8
+  mm : function: 0x401791a0
+  CmdLine : {...}
+  xcorr3 : function: 0x40177f30
+  ShortTensor : {...}
+  lt : function: 0x40177fa0
+  triu : function: 0x40177af0
+  repeatTensor : function: 0x41b8d508
+  loadobj : function: 0x4017f4f8
+  saveobj : function: 0x4017f4d8
+  eye : function: 0x40177720
+  ceil : function: 0x41ba4588
+  mul : function: 0x41b91d20
+  sqrt : function: 0x41ba44a8
+  LongTensor : {...}
+  serialize : function: 0x40a65d60
+  load : function: 0x4017f4f8
+  isequal : function: 0x41ba8c10
+  floor : function: 0x41ba45f8
+  save : function: 0x4017f4d8
+  permute : function: 0x41b9c700
+  totable : function: 0x40b34438
+  chunk : function: 0x4017ad78
+  split : function: 0x4017ad58
+  csub : function: 0x41b91cc0
+  gesv : function: 0x41ba4d40
+  PipeFile : {...}
+  LongStorage : {...}
+  viewAs : function: 0x4017ad38
+  view : function: 0x41b9bd40
+  Tensor : {...}
+  diag : function: 0x401776c0
+  std : function: 0x41b92d58
+  expandAs : function: 0x41b8d4e8
+  expand : function: 0x41b8d4c8
+  conv3 : function: 0x40177ec0
+  pointer : function: 0x4019b6e8
+  tril : function: 0x40177a78
+  setdefaulttensortype : function: 0x41b94810
+  uniform : function: 0x41ba4b38
+  all : function: 0x41b92b30
+  renorm : function: 0x41b92ed8
+  rsqrt : function: 0x41ba4740
+  class : function: 0x41b947b0
+  scatter : function: 0x41b91b30
+  sinh : function: 0x41ba4320
+  addbmm : function: 0x401793f8
+  packageLuaPath : function: 0x401715f8
+  symeig : function: 0x41ba4e80
+  remainder : function: 0x41b91e28
+  clamp : function: 0x41b91ee8
+  updatethreadlocals : function: 0x41b99ee0
+  setRNGState : function: 0x41b8e490
+  getRNGState : function: 0x41b8e3c8
+  metatype : function: 0x40a663c0
+  ShortStorage : {...}
+  initialSeed : function: 0x41b8e240
+  manualSeed : function: 0x41b8e308
+  _gen : torch.Generator
+  typename : function: 0x41ba6d08
+  median : function: 0x40177a08
+  cosh : function: 0x41b93240
+  pushudata : function: 0x40a66880
+  Generator : {...}
+  ormqr : function: 0x41b95c50
+  geqrf : function: 0x41b95b70
+  qr : function: 0x41b95b00
+  FloatStorage : {...}
+  seed : function: 0x41b8e180
+  potrs : function: 0x41b959c8
+  cos : function: 0x41b93168
+  svd : function: 0x41b95888
+  eig : function: 0x41b95818
+  abs : function: 0x41b92c00
+  dist : function: 0x41b92f38
+  frac : function: 0x41ba46d0
+  mod : function: 0x41b91e88
+  gather : function: 0x41b91ad0
+  IntTensor : {...}
+  bmm : function: 0x40179200
+  exponential : function: 0x41ba4cd8
+  gt : function: 0x41b928b0
+  randperm : function: 0x401777e8
+  include : function: 0x41b94748
+  normal : function: 0x41ba4ba0
+  multinomial : function: 0x41ba4ad0
+  nonzero : function: 0x41b92ac0
+  randn : function: 0x41ba4a70
+  rand : function: 0x41ba4a10
+  pow : function: 0x41ba49b8
+  any : function: 0x41b92b98
+  equal : function: 0x41b91be8
+  dot : function: 0x41b91b88
+  range : function: 0x40177780
+  cinv : function: 0x41ba4888
+  addr : function: 0x40179398
+  trtrs : function: 0x41ba4e18
+  HalfStorage : {...}
+  tan : function: 0x41ba4380
+  trunc : function: 0x41ba4668
+  serializeToStorage : function: 0x40a65d80
+  ones : function: 0x4017a638
+  tanh : function: 0x41ba4438
+  var : function: 0x41b92ce8
+  atan : function: 0x41ba43e0
+  setmetatable : function: 0x40a65d08
+  cumsum : function: 0x40179510
+  cauchy : function: 0x41ba4c08
+  ne : function: 0x41b92a50
+  exp : function: 0x41b93108
+  conv2 : function: 0x40177de8
+  potrf : function: 0x41b95960
+  DoubleStorage : {...}
+  CharStorage : {...}
+  asin : function: 0x41b93310
+  log1p : function: 0x41b930b0
+  log : function: 0x41b93050
+  logspace : function: 0x41b92ff8
+  addcmul : function: 0x40179078
+  File : {...}
+  type : function: 0x41b94870
+  sign : function: 0x40177d78
+  add : function: 0x41b91c50
+  mode : function: 0x40177998
+  toc : function: 0x41ba02d8
+  norm : function: 0x41b92e78
+  isatty : function: 0x4016eab8
+  tic : function: 0x41b91650
+  gels : function: 0x41ba4db0
+  reshape : function: 0x41b91a78
+  getdefaulttensortype : function: 0x4016c668
+  isStorage : function: 0x40b34478
+  cpow : function: 0x41b92008
+  mv : function: 0x40179138
+  CharTensor : {...}
+  setnumthreads : function: 0x41b93e28
+  factory : function: 0x41ba68d8
+  TestSuite : function: 0x4112c5a0
+  cumprod : function: 0x40179570
+  potri : function: 0x41b95a30
+  zeros : function: 0x4017a5d8
+  setenv : function: 0x40a647d8
+  updateerrorhandlers : function: 0x4019b850
+  getenv : function: 0x41ba8d68
+  acos : function: 0x41b931d0
+  div : function: 0x41b91d78
+  le : function: 0x41b92918
+  addmm : function: 0x40179338
+  cfmod : function: 0x41b92158
+  min : function: 0x40179690
+  max : function: 0x401796f0
+  sort : function: 0x40177848
+  cmax : function: 0x401797b8
+  DoubleTensor : {...}
+  trace : function: 0x40179820
+  round : function: 0x41ba4518
+  DiskFile : {...}
+  squeeze : function: 0x40177d08
+  cdiv : function: 0x41b920f0
+  setheaptracking : function: 0x4019b8e8
+  cmod : function: 0x40179018
+  HalfTensor : {...}
+}
+                                                                      [0.0034s]
+th> require 'nn'
+{
+  VolumetricMaxUnpooling : {...}
+  ConcatTable : {...}
+  MV : {...}
+  SpatialAveragePooling : {...}
+  SpatialConvolutionMM : {...}
+  VolumetricReplicationPadding : {...}
+  Reshape : {...}
+  Jacobian : 
+    {
+      forward : function: 0x40c767c0
+      testAllUpdate : function: 0x4112b300
+      testDiagHessianInput : function: 0x4112b5f0
+      testDiagHessianWeight : function: 0x40c767e0
+      testDiagHessianBias : function: 0x40c76800
+      testDiagHessian : function: 0x4112b5d0
+      testJacobian : function: 0x4112b3e8
+      testIO : function: 0x40c76820
+      testJacobianUpdateParameters : function: 0x4112b428
+      backwardDiagHessian : function: 0x407194a8
+      testJacobianParameters : function: 0x4112b408
+      backwardUpdate : function: 0x40c767a0
+      forwardUpdate : function: 0x4112b3c8
+      backward : function: 0x40719488
+      linearModuleDiagHessian : function: 0x407194c8
+    }
+  SparseLinear : {...}
+  SoftMarginCriterion : {...}
+  SpatialCrossMapLRN : {...}
+  CAddTable : {...}
+  TemporalConvolution : {...}
+  PairwiseDistance : {...}
+  SpatialLogSoftMax : {...}
+  WeightedMSECriterion : {...}
+  Bottle : {...}
+  SelectTable : {...}
+  TemporalSubSampling : {...}
+  PartialLinear : {...}
+  TanhShrink : {...}
+  MixtureTable : {...}
+  Normalize : {...}
+  LogSoftMax : {...}
+  Identity : {...}
+  Exp : {...}
+  Add : {...}
+  CAdd : {...}
+  MapTable : {...}
+  SpatialConvolutionLocal : {...}
+  Squeeze : {...}
+  AbsCriterion : {...}
+  MultiCriterion : {...}
+  Max : {...}
+  MulConstant : {...}
+  Replicate : {...}
+  View : {...}
+  VolumetricConvolution : {...}
+  SpatialSubSampling : {...}
+  DistanceRatioCriterion : {...}
+  HardTanh : {...}
+  Transpose : {...}
+  SplitTable : {...}
+  DotProduct : {...}
+  HingeEmbeddingCriterion : {...}
+  SpatialBatchNormalization : {...}
+  DepthConcat : {...}
+  Sigmoid : {...}
+  SpatialAdaptiveMaxPooling : {...}
+  Parallel : {...}
+  SoftShrink : {...}
+  CMinTable : {...}
+  SpatialSubtractiveNormalization : {...}
+  GPU : {...}
+  Log : {...}
+  VolumetricDropout : {...}
+  SpatialDropout : {...}
+  LeakyReLU : {...}
+  VolumetricMaxPooling : {...}
+  TemporalDynamicKMaxPooling : {...}
+  hessian : 
+    {
+      enable : function: 0x41db7580
+    }
+  Linear : {...}
+  Euclidean : {...}
+  CriterionTable : {...}
+  SpatialMaxPooling : {...}
+  MaskedSelect : {...}
+  MultiMarginCriterion : {...}
+  ELU : {...}
+  Threshold : {...}
+  SpatialReflectionPadding : {...}
+  Copy : {...}
+  Unsqueeze : {...}
+  VolumetricAveragePooling : {...}
+  StochasticGradient : {...}
+  SpatialContrastiveNormalization : {...}
+  Bilinear : {...}
+  SpatialReplicationPadding : {...}
+  SpatialUpSamplingBilinear : {...}
+  Padding : {...}
+  Container : {...}
+  MarginRankingCriterion : {...}
+  Module : {...}
+  VolumetricFullConvolution : {...}
+  Concat : {...}
+  CrossEntropyCriterion : {...}
+  LookupTable : {...}
+  ParallelTable : {...}
+  HardShrink : {...}
+  Abs : {...}
+  SparseJacobian : 
+    {
+      forward : function: 0x41802920
+      testJacobian : function: 0x4104f540
+      testIO : function: 0x41461068
+      testAllUpdate : function: 0x401e9608
+      testJacobianParameters : function: 0x41461028
+      testJacobianUpdateParameters : function: 0x41461048
+      forwardUpdate : function: 0x41802940
+      backward : function: 0x41808d28
+      backwardUpdate : function: 0x41802900
+    }
+  SoftMin : {...}
+  WeightedEuclidean : {...}
+  VolumetricBatchNormalization : {...}
+  ClassSimplexCriterion : {...}
+  Contiguous : {...}
+  testTHNN : function: 0x404d56e0
+  test : function: 0x404d56c0
+  MM : {...}
+  GatedLinearUnit : {...}
+  PixelShuffle : {...}
+  ParallelCriterion : {...}
+  FlattenTable : {...}
+  BCECriterion : {...}
+  PReLU : {...}
+  utils : 
+    {
+      contiguousView : function: 0x4186b6b0
+      recursiveType : function: 0x41673c58
+      recursiveCopy : function: 0x40b410f8
+      recursiveResizeAs : function: 0x41683270
+      recursiveAdd : function: 0x41127d40
+      clear : function: 0x4186b6d0
+      addSingletonDimension : function: 0x40b41118
+      recursiveFill : function: 0x41683290
+    }
+  AddConstant : {...}
+  SpatialDilatedMaxPooling : {...}
+  CMul : {...}
+  CosineDistance : {...}
+  Index : {...}
+  Mean : {...}
+  L1HingeEmbeddingCriterion : {...}
+  Dropout : {...}
+  L1Cost : {...}
+  SoftPlus : {...}
+  MultiLabelSoftMarginCriterion : {...}
+  MultiLabelMarginCriterion : {...}
+  CosineEmbeddingCriterion : {...}
+  SpatialDivisiveNormalization : {...}
+  L1Penalty : {...}
+  DistKLDivCriterion : {...}
+  VolumetricDilatedMaxPooling : {...}
+  Sqrt : {...}
+  Sequential : {...}
+  SpatialClassNLLCriterion : {...}
+  ClassNLLCriterion : {...}
+  Square : {...}
+  MarginCriterion : {...}
+  SmoothL1Criterion : {...}
+  Min : {...}
+  MSECriterion : {...}
+  SoftMax : {...}
+  Criterion : {...}
+  Cosine : {...}
+  Clamp : {...}
+  NarrowTable : {...}
+  JoinTable : {...}
+  CDivTable : {...}
+  TemporalMaxPooling : {...}
+  CMulTable : {...}
+  Sum : {...}
+  SoftSign : {...}
+  LogSigmoid : {...}
+  CSubTable : {...}
+  SpatialAutoCropMSECriterion : {...}
+  SpatialMaxUnpooling : {...}
+  Tanh : {...}
+  ReLU6 : {...}
+  SpatialFullConvolutionMap : {...}
+  Select : {...}
+  BatchNormalization : {...}
+  Mul : {...}
+  VolumetricDilatedConvolution : {...}
+  SpatialConvolution : {...}
+  GradientReversal : {...}
+  SpatialConvolutionMap : {...}
+  CMaxTable : {...}
+  ReLU : {...}
+  CReLU : {...}
+  SpatialDilatedConvolution : {...}
+  SpatialFullConvolution : {...}
+  tables : 
+    {
+      full : function: 0x41465ab8
+      oneToOne : function: 0x41465960
+      random : function: 0x41465980
+    }
+  RReLU : {...}
+  SpatialZeroPadding : {...}
+  SpatialLPPooling : {...}
+  Narrow : {...}
+  SpatialUpSamplingNearest : {...}
+  SpatialSoftMax : {...}
+  Power : {...}
+  SpatialFractionalMaxPooling : {...}
+}
+                                                                      [0.1741s]
+th> require 'nnx'
+true	
+                                                                      [0.0701s]
+th> require 'optim'
+{
+  rmsprop : function: 0x418a1218
+  cmaes : function: 0x418a7340
+  lbfgs : function: 0x4189b040
+  adadelta : function: 0x418a2330
+  FistaLS : function: 0x41787f98
+  polyinterp : function: 0x418af1a0
+  adamax : function: 0x418a0b10
+  adagrad : function: 0x4189ac70
+  Logger : {...}
+  sgd : function: 0x41781f00
+  ConfusionMatrix : {...}
+  checkgrad : function: 0x418ad7d0
+  lswolfe : function: 0x418a6c00
+  rprop : function: 0x4189c580
+  adam : function: 0x4189fc90
+  cg : function: 0x41782690
+  de : function: 0x418a6e90
+  nag : function: 0x417864a0
+  asgd : function: 0x41785570
+}
+                                                                      [0.0600s]
+th> require 'csvigo'
+{
+  load : function: 0x41c06070
+  save : function: 0x41c06090
+  File : {...}
+}
+                                                                      [0.0131s]
+th> 
+                                                                      [0.0000s]
+th> trainPath = '/home/dmitry/nn/Spectr_MFNN.csv'
+                                                                      [0.0000s]
+th> 
+                                                                      [0.0000s]
+th> trainData= csvigo.load({path= trainPath, mode='raw', separator=';' })
+<csv>	parsing file: /home/dmitry/nn/Spectr_MFNN.csv	
+<csv>	parsing done	
+                                                                      [0.0341s]
+th> -- testData = torch.load(testPath,'ascii')
+                                                                      [0.0000s]
+th> csv_tensor = torch.Tensor(trainData)
+                                                                      [0.0263s]
+th> 
+                                                                      [0.0000s]
+th> input  = csv_tensor:sub(1,30,2,1667)
+                                                                      [0.0000s]
+th> output = csv_tensor:sub(1,30,1,1)
+                                                                      [0.0000s]
+th> 
+                                                                      [0.0000s]
+th> -- define the mlp
+                                                                      [0.0000s]
+th> mlp = nn.Sequential()
+                                                                      [0.0001s]
+th> 
+                                                                      [0.0000s]
+th> mlp:add(nn.Reshape(1666))
+nn.Sequential {
+  [input -> (1) -> output]
+  (1): nn.Reshape(1666)
+}
+                                                                      [0.0001s]
+th> mlp:add(nn.Linear(1666, 512))
+nn.Sequential {
+  [input -> (1) -> (2) -> output]
+  (1): nn.Reshape(1666)
+  (2): nn.Linear(1666 -> 512)
+}
+                                                                      [0.0057s]
+th> mlp:add(nn.Tanh())
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> output]
+  (1): nn.Reshape(1666)
+  (2): nn.Linear(1666 -> 512)
+  (3): nn.Tanh
+}
+                                                                      [0.0001s]
+th> mlp:add(nn.Linear(512, 256))
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> output]
+  (1): nn.Reshape(1666)
+  (2): nn.Linear(1666 -> 512)
+  (3): nn.Tanh
+  (4): nn.Linear(512 -> 256)
+}
+                                                                      [0.0011s]
+th> mlp:add(nn.Tanh())
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> output]
+  (1): nn.Reshape(1666)
+  (2): nn.Linear(1666 -> 512)
+  (3): nn.Tanh
+  (4): nn.Linear(512 -> 256)
+  (5): nn.Tanh
+}
+                                                                      [0.0001s]
+th> mlp:add(nn.Linear(256, 128))
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> output]
+  (1): nn.Reshape(1666)
+  (2): nn.Linear(1666 -> 512)
+  (3): nn.Tanh
+  (4): nn.Linear(512 -> 256)
+  (5): nn.Tanh
+  (6): nn.Linear(256 -> 128)
+}
+                                                                      [0.0003s]
+th> mlp:add(nn.Tanh())
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> output]
+  (1): nn.Reshape(1666)
+  (2): nn.Linear(1666 -> 512)
+  (3): nn.Tanh
+  (4): nn.Linear(512 -> 256)
+  (5): nn.Tanh
+  (6): nn.Linear(256 -> 128)
+  (7): nn.Tanh
+}
+                                                                      [0.0001s]
+th> mlp:add(nn.Linear(128, 1))
+nn.Sequential {
+  [input -> (1) -> (2) -> (3) -> (4) -> (5) -> (6) -> (7) -> (8) -> output]
+  (1): nn.Reshape(1666)
+  (2): nn.Linear(1666 -> 512)
+  (3): nn.Tanh
+  (4): nn.Linear(512 -> 256)
+  (5): nn.Tanh
+  (6): nn.Linear(256 -> 128)
+  (7): nn.Tanh
+  (8): nn.Linear(128 -> 1)
+}
+                                                                      [0.0001s]
+th> 
+                                                                      [0.0000s]
+th> 
+                                                                      [0.0000s]
+th> loss = nn.MSECriterion()
+                                                                      [0.0000s]
+th> 
+                                                                      [0.0000s]
+th> --mlp:add(nn.LogSoftMax())
+                                                                      [0.0000s]
+th> --loss = nn.ClassNLLCriterion()
+                                                                      [0.0000s]
+th> 
+                                                                      [0.0000s]
+th> -- Configuring optimizer
+                                                                      [0.0000s]
+th> --local optimState = {
+                                                                      [0.0000s]
+th> --   learningRate = 0.01,
+                                                                      [0.0000s]
+th> --   momentum = 0.6,--0.1,
+                                                                      [0.0000s]
+th> --   weightDecay = 0.0005--1e-5
+                                                                      [0.0000s]
+th> --}
+                                                                      [0.0000s]
+th> 
+                                                                      [0.0000s]
+th> optim_state_lbfgs = {
+..> 
+and                      loadstring(              setprintlevel(
+arg.                     local                    string.
+assert(                  loss.                    sumCosts(
+bit.                     math.                    sys.
+break                    mlp.                     table.
+browse(                  module(                  text.
+collectgarbage(          monitor_G(               then 
+coroutine.               newproxy(                tonumber(
+csv_tensor:              next(                    torch.
+csvigo.                  nil                      torchtest_chunk(
+debug.                   nn.                      torchtest_expand(
+do                       nnx.                     torchtest_isSameSizeAs(
+dofile(                  noColors(                torchtest_isSetTo(
+dok.                     not                      torchtest_isSize(
+else                     optim.                   torchtest_isStorage(
+elseif                   or                       torchtest_isTensor(
+end                      os.                      torchtest_permute(
+error(                   output:                  torchtest_repeatTensor(
+false                    package.                 torchtest_split(
+for                      pairs(                   torchtest_totable(
+function                 paths.                   torchtest_view(
+gcinfo(                  pcall(                   tostring(
+getfenv(                 print(                   trainData.
+getmetatable(            print_new(               trainPath 
+help(                    print_old(               true 
+if                       rawequal(                type(
+import(                  rawget(                  unpack(
+in                       rawlen(                  until 
+include(                 rawset(                  utils.
+input:                   repeat                   while 
+inverseInterleave(       repl(                    who(
+io.                      require(                 xerror(
+ipairs(                  return                   xlua.
+jit.                     select(                  xpcall(
+load(                    setfenv(                 xprint(
+loadfile(                setmetatable(            xrequire(
+..> learningRate = 0.5,
+..> 
+and                      loadstring(              setprintlevel(
+arg.                     local                    string.
+assert(                  loss.                    sumCosts(
+bit.                     math.                    sys.
+break                    mlp.                     table.
+browse(                  module(                  text.
+collectgarbage(          monitor_G(               then 
+coroutine.               newproxy(                tonumber(
+csv_tensor:              next(                    torch.
+csvigo.                  nil                      torchtest_chunk(
+debug.                   nn.                      torchtest_expand(
+do                       nnx.                     torchtest_isSameSizeAs(
+dofile(                  noColors(                torchtest_isSetTo(
+dok.                     not                      torchtest_isSize(
+else                     optim.                   torchtest_isStorage(
+elseif                   or                       torchtest_isTensor(
+end                      os.                      torchtest_permute(
+error(                   output:                  torchtest_repeatTensor(
+false                    package.                 torchtest_split(
+for                      pairs(                   torchtest_totable(
+function                 paths.                   torchtest_view(
+gcinfo(                  pcall(                   tostring(
+getfenv(                 print(                   trainData.
+getmetatable(            print_new(               trainPath 
+help(                    print_old(               true 
+if                       rawequal(                type(
+import(                  rawget(                  unpack(
+in                       rawlen(                  until 
+include(                 rawset(                  utils.
+input:                   repeat                   while 
+inverseInterleave(       repl(                    who(
+io.                      require(                 xerror(
+ipairs(                  return                   xlua.
+jit.                     select(                  xpcall(
+load(                    setfenv(                 xprint(
+loadfile(                setmetatable(            xrequire(
+..> maxIter = 60,
+..> 
+and                      loadstring(              setprintlevel(
+arg.                     local                    string.
+assert(                  loss.                    sumCosts(
+bit.                     math.                    sys.
+break                    mlp.                     table.
+browse(                  module(                  text.
+collectgarbage(          monitor_G(               then 
+coroutine.               newproxy(                tonumber(
+csv_tensor:              next(                    torch.
+csvigo.                  nil                      torchtest_chunk(
+debug.                   nn.                      torchtest_expand(
+do                       nnx.                     torchtest_isSameSizeAs(
+dofile(                  noColors(                torchtest_isSetTo(
+dok.                     not                      torchtest_isSize(
+else                     optim.                   torchtest_isStorage(
+elseif                   or                       torchtest_isTensor(
+end                      os.                      torchtest_permute(
+error(                   output:                  torchtest_repeatTensor(
+false                    package.                 torchtest_split(
+for                      pairs(                   torchtest_totable(
+function                 paths.                   torchtest_view(
+gcinfo(                  pcall(                   tostring(
+getfenv(                 print(                   trainData.
+getmetatable(            print_new(               trainPath 
+help(                    print_old(               true 
+if                       rawequal(                type(
+import(                  rawget(                  unpack(
+in                       rawlen(                  until 
+include(                 rawset(                  utils.
+input:                   repeat                   while 
+inverseInterleave(       repl(                    who(
+io.                      require(                 xerror(
+ipairs(                  return                   xlua.
+jit.                     select(                  xpcall(
+load(                    setfenv(                 xprint(
+loadfile(                setmetatable(            xrequire(
+..> nCorrection = 20
+..> }
+                                                                      [0.0000s]
+th> 
+                                                                      [0.0000s]
+th> 
+                                                                      [0.0000s]
+th> w,dE_dw = mlp:getParameters()
+                                                                      [0.0469s]
+th> 
+                                                                      [0.0000s]
+th> function eval_E(w)
+..> --local eval_E = function(w)
+..>     dE_dw:zero() -- Обновляем градиенты
+..>     local Y = mlp:forward(input)
+..>     local E = loss:forward(Y,output)
+..>     local dE_dy = loss:backward(Y,output)
+..>     mlp:backward(input,dE_dy)
+..>     return E, dE_dw
+..> 
+and                      loadstring(              setprintlevel(
+arg.                     local                    string.
+assert(                  loss.                    sumCosts(
+bit.                     math.                    sys.
+break                    mlp.                     table.
+browse(                  module(                  text.
+collectgarbage(          monitor_G(               then 
+coroutine.               newproxy(                tonumber(
+csv_tensor:              next(                    torch.
+csvigo.                  nil                      torchtest_chunk(
+dE_dw:                   nn.                      torchtest_expand(
+debug.                   nnx.                     torchtest_isSameSizeAs(
+do                       noColors(                torchtest_isSetTo(
+dofile(                  not                      torchtest_isSize(
+dok.                     optim.                   torchtest_isStorage(
+else                     optim_state_lbfgs.       torchtest_isTensor(
+elseif                   or                       torchtest_permute(
+end                      os.                      torchtest_repeatTensor(
+error(                   output:                  torchtest_split(
+false                    package.                 torchtest_totable(
+for                      pairs(                   torchtest_view(
+function                 paths.                   tostring(
+gcinfo(                  pcall(                   trainData.
+getfenv(                 print(                   trainPath 
+getmetatable(            print_new(               true 
+help(                    print_old(               type(
+if                       rawequal(                unpack(
+import(                  rawget(                  until 
+in                       rawlen(                  utils.
+include(                 rawset(                  w:
+input:                   repeat                   while 
+inverseInterleave(       repl(                    who(
+io.                      require(                 xerror(
+ipairs(                  return                   xlua.
+jit.                     select(                  xpcall(
+load(                    setfenv(                 xprint(
+loadfile(                setmetatable(            xrequire(
+..> --return E, dE_dy --для пробы, возможно неправильно
+..> end
+                                                                      [0.0000s]
+th> -- optim_method = optim.sgd
+                                                                      [0.0000s]
+th> 
+                                                                      [0.0000s]
+th> 
+                                                                      [0.0000s]
+th> 
+                                                                      [0.0000s]
+th> --закомментить
+                                                                      [0.0000s]
+th> --local eval_E = function(w)
+                                                                      [0.0000s]
+th> --    dE_dw:zero() -- Обновляем градиенты
+                                                                      [0.0000s]
+th> --    local Y = mlp:forward(input)
+                                                                      [0.0000s]
+th> --    local E = loss:forward(Y,output)
+                                                                      [0.0000s]
+th> --    local dE_dy = loss:backward(Y,output)
+                                                                      [0.0000s]
+th> --    mlp:backward(input,dE_dy)
+                                                                      [0.0000s]
+th> --   return E, dE_dw
+                                                                      [0.0000s]
+th> --
+and                      loadstring(              string.
+arg.                     local                    sumCosts(
+assert(                  loss.                    sys.
+bit.                     math.                    table.
+break                    mlp.                     text.
+browse(                  module(                  then 
+collectgarbage(          monitor_G(               tonumber(
+coroutine.               newproxy(                torch.
+csv_tensor:              next(                    torchtest_chunk(
+csvigo.                  nil                      torchtest_expand(
+dE_dw:                   nn.                      torchtest_isSameSizeAs(
+debug.                   nnx.                     torchtest_isSetTo(
+do                       noColors(                torchtest_isSize(
+dofile(                  not                      torchtest_isStorage(
+dok.                     optim.                   torchtest_isTensor(
+else                     optim_state_lbfgs.       torchtest_permute(
+elseif                   or                       torchtest_repeatTensor(
+end                      os.                      torchtest_split(
+error(                   output:                  torchtest_totable(
+eval_E(                  package.                 torchtest_view(
+false                    pairs(                   tostring(
+for                      paths.                   trainData.
+function                 pcall(                   trainPath 
+gcinfo(                  print(                   true 
+getfenv(                 print_new(               type(
+getmetatable(            print_old(               unpack(
+help(                    rawequal(                until 
+if                       rawget(                  utils.
+import(                  rawlen(                  w:
+in                       rawset(                  while 
+include(                 repeat                   who(
+input:                   repl(                    xerror(
+inverseInterleave(       require(                 xlua.
+io.                      return                   xpcall(
+ipairs(                  select(                  xprint(
+jit.                     setfenv(                 xrequire(
+load(                    setmetatable(            
+loadfile(                setprintlevel(           
+th> ----return E, dE_dy --для пробы, возможно неправильно
+                                                                      [0.0000s]
+th> --end
+                                                                      [0.0000s]
+th> mlp:reset()
+                                                                      [0.0060s]
+th> timer = torch.Timer();
+                                                                      [0.0000s]
+th> --maxIter =50;
+                                                                      [0.0000s]
+th> --for i=1,maxIter do
+                                                                      [0.0000s]
+th> 
+and                      loadstring(              string.
+arg.                     local                    sumCosts(
+assert(                  loss.                    sys.
+bit.                     math.                    table.
+break                    mlp.                     text.
+browse(                  module(                  then 
+collectgarbage(          monitor_G(               timer:
+coroutine.               newproxy(                tonumber(
+csv_tensor:              next(                    torch.
+csvigo.                  nil                      torchtest_chunk(
+dE_dw:                   nn.                      torchtest_expand(
+debug.                   nnx.                     torchtest_isSameSizeAs(
+do                       noColors(                torchtest_isSetTo(
+dofile(                  not                      torchtest_isSize(
+dok.                     optim.                   torchtest_isStorage(
+else                     optim_state_lbfgs.       torchtest_isTensor(
+elseif                   or                       torchtest_permute(
+end                      os.                      torchtest_repeatTensor(
+error(                   output:                  torchtest_split(
+eval_E(                  package.                 torchtest_totable(
+false                    pairs(                   torchtest_view(
+for                      paths.                   tostring(
+function                 pcall(                   trainData.
+gcinfo(                  print(                   trainPath 
+getfenv(                 print_new(               true 
+getmetatable(            print_old(               type(
+help(                    rawequal(                unpack(
+if                       rawget(                  until 
+import(                  rawlen(                  utils.
+in                       rawset(                  w:
+include(                 repeat                   while 
+input:                   repl(                    who(
+inverseInterleave(       require(                 xerror(
+io.                      return                   xlua.
+ipairs(                  select(                  xpcall(
+jit.                     setfenv(                 xprint(
+load(                    setmetatable(            xrequire(
+loadfile(                setprintlevel(           
+th> _,fw = optim.lbfgs(eval_E, w, optim_state_lbfgs);
+
+                                                                      [5.0786s]
+th> --
+and                      loadstring(              string.
+arg.                     local                    sumCosts(
+assert(                  loss.                    sys.
+bit.                     math.                    table.
+break                    mlp.                     text.
+browse(                  module(                  then 
+collectgarbage(          monitor_G(               timer:
+coroutine.               newproxy(                tonumber(
+csv_tensor:              next(                    torch.
+csvigo.                  nil                      torchtest_chunk(
+dE_dw:                   nn.                      torchtest_expand(
+debug.                   nnx.                     torchtest_isSameSizeAs(
+do                       noColors(                torchtest_isSetTo(
+dofile(                  not                      torchtest_isSize(
+dok.                     optim.                   torchtest_isStorage(
+else                     optim_state_lbfgs.       torchtest_isTensor(
+elseif                   or                       torchtest_permute(
+end                      os.                      torchtest_repeatTensor(
+error(                   output:                  torchtest_split(
+eval_E(                  package.                 torchtest_totable(
+false                    pairs(                   torchtest_view(
+for                      paths.                   tostring(
+function                 pcall(                   trainData.
+fw.                      print(                   trainPath 
+gcinfo(                  print_new(               true 
+getfenv(                 print_old(               type(
+getmetatable(            r:                       unpack(
+help(                    rawequal(                until 
+if                       rawget(                  utils.
+import(                  rawlen(                  w:
+in                       rawset(                  while 
+include(                 repeat                   who(
+input:                   repl(                    xerror(
+inverseInterleave(       require(                 xlua.
+io.                      return                   xpcall(
+ipairs(                  select(                  xprint(
+jit.                     setfenv(                 xrequire(
+load(                    setmetatable(            
+loadfile(                setprintlevel(           
+th> --if i%(torch.floor(maxIter/10))==0 then print(string.format('MSE = %f',fw[1])) end
+                                                                      [0.0000s]
+th> --end
+                                                                      [0.0000s]
+th> --cutorch.synchronize()
+                                                                      [0.0000s]
+th> print(string.format('Success! Average iteration time was %f',timer:time().real))
+Success! Average iteration time was 5.092776	
+                                                                      [0.0000s]
+th> print('Success!')
+Success!	
+                                                                      [0.0000s]
+th> 
+                                                                      [0.0000s]
+th> torch.cat(mlp:forward(input),output)
+ 0.0498  0.0500
+ 0.0498  0.0501
+ 0.0747  0.0751
+ 0.0747  0.0750
+ 0.0997  0.1000
+ 0.0996  0.1002
+ 0.1497  0.1501
+ 0.1497  0.1502
+ 0.2495  0.2500
+ 0.2494  0.2501
+ 0.4001  0.4001
+ 0.4001  0.4002
+ 0.1510  0.1507
+ 0.2508  0.2508
+ 0.1010  0.1011
+ 0.2506  0.2504
+ 0.0757  0.0755
+ 0.2504  0.2511
+ 0.2521  0.2514
+ 0.2519  0.2510
+ 0.2508  0.2511
+ 0.1021  0.1014
+ 0.1007  0.1006
+ 0.2516  0.2513
+ 0.0510  0.0505
+ 0.1510  0.1509
+ 0.0759  0.0754
+ 0.1508  0.1505
+ 0.0509  0.0507
+ 0.1008  0.1008
+[torch.DoubleTensor of size 30x2]
+
+                                                                      [0.0031s]
+th> #fw
+48	
