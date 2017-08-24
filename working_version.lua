@@ -87,6 +87,7 @@ print('Success!')
 
 torch.cat(mlp:forward(input),output)
 #fw
+print('time=',timer:time().real)
 
 
 
@@ -176,9 +177,11 @@ timer = torch.Timer();
 cutorch.synchronize()
 print(string.format('Success! Average iteration time was %f', timer:time().real))
 print('Success!')
+
 torch.cat(mlp:forward(input),output)
 #fw
-
+print('time=',timer:time().real)
+--timer = nil
 --конец
 
 
